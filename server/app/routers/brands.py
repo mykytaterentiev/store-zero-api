@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from db import get_db_conn, release_db_conn
-from embeddings import generate_brand_embedding
+from app.db import get_db_conn, release_db_conn
+from app.embeddings import generate_brand_embedding
 
 brand_router = APIRouter()
 

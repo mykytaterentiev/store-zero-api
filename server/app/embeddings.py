@@ -2,7 +2,7 @@ import google.generativeai as genai
 import os
 from numpy import dot
 from numpy.linalg import norm
-from mcc import get_mcc_description  
+from app.mcc import get_mcc_description  
 
 genai.configure(api_key=os.getenv("API_KEY"))
 

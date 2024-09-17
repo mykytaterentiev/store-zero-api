@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from db import get_db_conn, release_db_conn
+from app.db import get_db_conn, release_db_conn
 import re
 from fuzzywuzzy import fuzz
 import unicodedata
@@ -11,7 +11,7 @@ class BranchRequest(BaseModel):
     merchant_name: str
     city: str
     brand_name: str
-    
+
 def extract_store_id(merchant_name, brand):
     if brand == "Zabka":
         match = re.search(r'Z\d{3,4}', merchant_name) 

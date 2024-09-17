@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException
-from models.transactions import Transaction 
-from db import get_db_conn, release_db_conn
-from embeddings import generate_combined_embedding, cosine_similarity
-from mcc import get_mcc_description 
+from app.models.transactions import Transaction 
+from app.db import get_db_conn, release_db_conn
+from app.embeddings import generate_combined_embedding, cosine_similarity
+from app.mcc import get_mcc_description 
 import logging
 
 transaction_router = APIRouter()
